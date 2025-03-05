@@ -12,7 +12,7 @@ function gaussianRandom(mean = 0, stdev = 1) {
 function getGaussianRandomValues(mean = 0, stdev = 1, count = 13) {
     const values: any[] = [];
     for (let i = 0; i < count; i++) {
-        const date = getLastWeekDate(values[values.length - 2] && new Date(values[values.length - 2][0]));
+        const date = getLastWeekDate(values[values.length - 1] && new Date(values[values.length - 1][0]));
         values.push([date, gaussianRandom(mean, stdev)]);
     }
     return values;
